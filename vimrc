@@ -43,3 +43,16 @@ set undodir=~/.vim/backup/undo
 
 
 ""let mapleader="\<Space>"
+
+
+if has('unnamedplus')
+  set clipboard=unnamed,unnamedplus
+endif
+
+""Mac用 
+if has('macunix')
+  " pbcopy for OSX copy/paste
+  vmap <C-x> :!pbcopy<CR>
+  vmap <C-c> :w !pbcopy<CR><CR>
+endif
+
